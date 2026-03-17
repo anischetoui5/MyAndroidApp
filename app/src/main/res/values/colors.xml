@@ -1,0 +1,165 @@
+<resources>
+    <color name="blue">#2196F3</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="orange">#FF9800</color>
+    <color name="gray">#9E9E9E</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primary">#2196F3</color>
+    <color name="secondary_text">#666666</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="light_gray">#F5F5F5</color>
+    <!-- Primary Colors -->
+    <color name="primary_blue">#2196F3</color>
+    <color name="primary_blue_dark">#1976D2</color>
+    <color name="primary_blue_light">#BBDEFB</color>
+
+    <!-- Secondary Colors -->
+    <color name="green_dark">#388E3C</color>
+    <color name="green_light">#C8E6C9</color>
+
+    <color name="orange_dark">#F57C00</color>
+    <color name="orange_light">#FFE0B2</color>
+
+    <color name="red_dark">#D32F2F</color>
+    <color name="red_light">#FFCDD2</color>
+
+    <color name="purple">#9C27B0</color>
+    <color name="purple_dark">#7B1FA2</color>
+    <color name="purple_light">#E1BEE7</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_black">#000000</color>
+
+    <!-- Background Colors -->
+    <color name="background_gray">#F5F5F5</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="background_dark">#212121</color>
+    <color name="background_light_gray">#FAFAFA</color>
+
+    <!-- Surface Colors -->
+    <color name="surface_white">#FFFFFF</color>
+    <color name="surface_gray">#F5F5F5</color>
+    <color name="surface_dark">#212121</color>
+
+    <!-- Divider Colors -->
+    <color name="divider_light">#E0E0E0</color>
+    <color name="divider_dark">#424242</color>
+
+    <!-- Progress Bar Colors -->
+    <color name="progress_start">#4CAF50</color>
+    <color name="progress_middle">#FF9800</color>
+    <color name="progress_end">#F44336</color>
+
+    <!-- Card Colors -->
+    <color name="card_shadow">#1A000000</color>
+    <color name="card_elevation">#0D000000</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#2196F3</color>
+    <color name="gradient_middle">#4CAF50</color>
+    <color name="gradient_end">#FF9800</color>
+
+    <!-- Transparent Colors -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+    <color name="semi_transparent_black">#80000000</color>
+
+    <!-- Status Indicator Backgrounds -->
+    <color name="status_success_bg">#E8F5E9</color>
+    <color name="status_warning_bg">#FFF3E0</color>
+    <color name="status_error_bg">#FFEBEE</color>
+    <color name="status_info_bg">#E3F2FD</color>
+
+    <!-- Button States -->
+    <color name="button_pressed_blue">#1976D2</color>
+    <color name="button_pressed_green">#388E3C</color>
+    <color name="button_pressed_red">#D32F2F</color>
+    <color name="button_disabled">#E0E0E0</color>
+
+    <!-- Chart/Graph Colors -->
+    <color name="chart_blue">#2196F3</color>
+    <color name="chart_green">#4CAF50</color>
+    <color name="chart_orange">#FF9800</color>
+    <color name="chart_red">#F44336</color>
+    <color name="chart_purple">#9C27B0</color>
+    <color name="chart_teal">#009688</color>
+
+    <!-- Icon Tints -->
+    <color name="icon_primary">#757575</color>
+    <color name="icon_secondary">#BDBDBD</color>
+    <color name="icon_active">#2196F3</color>
+    <color name="icon_success">#4CAF50</color>
+    <color name="icon_warning">#FF9800</color>
+    <color name="icon_error">#F44336</color>
+
+    <!-- Shadow Colors -->
+    <color name="shadow_light">#1A000000</color>
+    <color name="shadow_medium">#33000000</color>
+    <color name="shadow_dark">#66000000</color>
+
+    <!-- Overlay Colors -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="overlay_light">#80FFFFFF</color>
+
+    <!-- Specific Component Colors -->
+    <color name="budget_card_header">#2196F3</color>
+    <color name="members_card_header">#4CAF50</color>
+    <color name="expenses_card_header">#FF9800</color>
+
+    <!-- Border Colors -->
+    <color name="border_light">#E0E0E0</color>
+    <color name="border_medium">#BDBDBD</color>
+    <color name="border_dark">#757575</color>
+
+    <!-- Add to the same colors.xml file if you want theme options -->
+
+    <!-- Light Theme (Default) -->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF9800</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorOnBackground">#212121</color>
+    <color name="colorOnSurface">#212121</color>
+    <color name="colorError">#F44336</color>
+
+    <!-- Dark Theme -->
+    <color name="colorPrimaryDarkTheme">#90CAF9</color>
+    <color name="colorPrimaryDarkDarkTheme">#64B5F6</color>
+    <color name="colorAccentDarkTheme">#FFB74D</color>
+    <color name="colorBackgroundDarkTheme">#121212</color>
+    <color name="colorSurfaceDarkTheme">#1E1E1E</color>
+    <color name="colorOnPrimaryDarkTheme">#000000</color>
+    <color name="colorOnSecondaryDarkTheme">#000000</color>
+    <color name="colorOnBackgroundDarkTheme">#FFFFFF</color>
+    <color name="colorOnSurfaceDarkTheme">#FFFFFF</color>
+
+    <!-- Gradient Colors for Progress Bar -->
+    <color name="gradient_progress_start">#4CAF50</color>
+    <color name="gradient_progress_mid">#FFC107</color>
+    <color name="gradient_progress_end">#F44336</color>
+
+    <!-- Status Colors with Transparency -->
+    <color name="status_on_track">#4CAF50</color>
+    <color name="status_at_risk">#FF9800</color>
+    <color name="status_over_budget">#F44336</color>
+    <color name="status_on_track_bg">#E8F5E9</color>
+    <color name="status_at_risk_bg">#FFF3E0</color>
+    <color name="status_over_budget_bg">#FFEBEE</color>
+
+    <color name="gray_dark">#757575</color>
+</resources>

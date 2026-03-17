@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/nav_transactions"
+        android:title="Transactions"
+        android:icon="@drawable/ic_list" />
+
+    <item
+        android:id="@+id/nav_categories"
+        android:title="Categories"
+        android:icon="@drawable/ic_category" />
+
+    <item
+        android:id="@+id/nav_groups"
+        android:title="Groups"
+        android:icon="@drawable/ic_group" />
+
+    <item
+        android:id="@+id/nav_dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_chart" />
+
+</menu>

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/background_gray"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- Loading Spinner with Modern Style -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="40dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/primary_blue"
+            android:background="@drawable/bg_loading_spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Group Name Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvGroupName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Group Details"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:letterSpacing="-0.02"
+                android:fontFamily="sans-serif-medium" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_group_24"
+                app:tint="@color/primary_blue"
+                android:contentDescription="Group icon" />
+        </LinearLayout>
+
+        <!-- Budget Overview Card - Modern Card Design -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Card Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📊 Budget Overview"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_trending_up_24"
+                        app:tint="@color/primary_blue"
+                        android:contentDescription="Trending icon" />
+                </LinearLayout>
+
+                <!-- Budget Stats -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/tvTotalBudget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Budget: $0.00"
+                        android:textSize="17sp"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="8dp"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/ic_wallet_24"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tvSpentAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spent: $0.00"
+                        android:textSize="17sp"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="8dp"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/ic_spent_24"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tvRemainingBudget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remaining: $0.00"
+                        android:textSize="17sp"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="16dp"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/ic_remaining_24"
+                        android:fontFamily="sans-serif" />
+                </LinearLayout>
+
+                <!-- Progress Bar with Labels -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0%"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Budget Progress"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+
+                        <TextView
+                            android:id="@+id/progressPercentage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="100%"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:gravity="end" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/budgetProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:progressDrawable="@drawable/progress_bar_gradient"
+                        android:minHeight="12dp"
+                        android:maxHeight="12dp" />
+                </LinearLayout>
+
+                <!-- Status Indicator -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Status:"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_secondary"
+                        android:fontFamily="sans-serif" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_status_indicator"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:gravity="center">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/circle_green"
+                            android:layout_marginEnd="6dp" />
+
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On Track"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/green_dark"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Members Info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_info_container"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvMemberCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👥 Members: 0"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tvAverageSpent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📊 Average per person: $0.00"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Quick Actions - Modern Button Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddExpense"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp"
+                android:text="➕ Add Expense"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                app:strokeColor="@color/primary_blue"
+                app:strokeWidth="1dp"
+                app:cornerRadius="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:drawableStart="@drawable/ic_add_24"
+                android:drawablePadding="8dp"
+                app:iconTint="@color/primary_blue" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInviteMore"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="📨 Invite"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:backgroundTint="@color/green"
+                android:fontFamily="sans-serif-medium"
+                android:drawableStart="@drawable/ic_invite_24"
+                android:drawablePadding="8dp"
+                app:iconTint="@color/text_white" />
+
+        </LinearLayout>
+
+        <!-- Members Section - Modern Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/membersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Section Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="👥 Group Members"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_expand_more_24"
+                        app:tint="@color/text_secondary"
+                        android:contentDescription="Expand icon"
+                        android:rotation="0" />
+                </LinearLayout>
+
+                <!-- Empty State -->
+                <TextView
+                    android:id="@+id/tvNoMembers"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:text="👤 No members yet\nInvite friends to get started!"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_secondary"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:lineSpacingExtra="4dp"
+                    android:visibility="gone"
+                    android:fontFamily="sans-serif" />
+
+                <!-- Members List -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewMembers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingTop="8dp" />
+
+                <!-- View All Link -->
+                <TextView
+                    android:id="@+id/tvViewAllMembers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View all members →"
+                    android:textSize="14sp"
+                    android:textColor="@color/primary_blue"
+                    android:layout_marginTop="12dp"
+                    android:paddingVertical="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Recent Expenses Section - Modern Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/expensesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Section Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💰 Recent Expenses"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_expand_more_24"
+                        app:tint="@color/text_secondary"
+                        android:contentDescription="Expand icon"
+                        android:rotation="0" />
+                </LinearLayout>
+
+                <!-- Empty State -->
+                <TextView
+                    android:id="@+id/tvNoExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:text="💸 No expenses yet\nAdd your first expense!"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_secondary"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:lineSpacingExtra="4dp"
+                    android:visibility="gone"
+                    android:fontFamily="sans-serif" />
+
+                <!-- Expenses List -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingTop="8dp" />
+
+                <!-- View All Link -->
+                <TextView
+                    android:id="@+id/tvViewAllExpenses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View all expenses →"
+                    android:textSize="14sp"
+                    android:textColor="@color/primary_blue"
+                    android:layout_marginTop="12dp"
+                    android:paddingVertical="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons - Modern Style -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLeaveGroup"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🚪 Leave Group"
+                android:textSize="16sp"
+                app:strokeColor="@color/red"
+                app:strokeWidth="1dp"
+                app:cornerRadius="12dp"
+                android:textColor="@color/red"
+                android:fontFamily="sans-serif-medium"
+                android:drawableStart="@drawable/ic_exit_24"
+                android:drawablePadding="8dp"
+                app:iconTint="@color/red" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

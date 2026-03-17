@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_blue_to_green"
+    android:fitsSystemWindows="true"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👤"
+                android:textSize="48sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.02"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join BudgetPal today"
+                android:textSize="16sp"
+                android:textColor="@color/semi_transparent_white"
+                android:fontFamily="sans-serif" />
+
+        </LinearLayout>
+
+        <!-- Signup Form Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Full Name Field -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Enter your full name"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:background="@drawable/edittext_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Email Field -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Enter your email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:background="@drawable/edittext_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Password Field -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Create a strong password"
+                    android:inputType="textPassword"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:background="@drawable/edittext_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Confirm Password Field -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Password"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Re-enter your password"
+                    android:inputType="textPassword"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:background="@drawable/edittext_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Currency Field -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Currency"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <EditText
+                        android:id="@+id/etCurrency"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:hint="USD, EUR, TND"
+                        android:inputType="textCapCharacters"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"
+                        android:background="@drawable/edittext_background"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💱"
+                        android:textSize="20sp"
+                        android:layout_marginStart="12dp" />
+
+                </LinearLayout>
+
+                <!-- Sign Up Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Create Account"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.02"
+                    app:cornerRadius="14dp"
+                    app:backgroundTint="@color/primary_blue"
+                    android:fontFamily="sans-serif-medium"
+                    android:drawablePadding="12dp"
+                    app:iconTint="@color/white"
+                    android:elevation="4dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Terms Agreement -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By signing up, you agree to our Terms of Service and Privacy Policy"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingHorizontal="8dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Login Link -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_rounded_corner_16dp"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="sans-serif" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login Now"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                app:cornerRadius="20dp"
+                app:backgroundTint="@color/transparent"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/button_outline_selector"
+                android:drawablePadding="4dp"
+                app:iconTint="@color/primary_blue" />
+
+        </LinearLayout>
+
+        <!-- Quick Signup Options -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or sign up with"
+            android:textSize="14sp"
+            android:textColor="@color/semi_transparent_white"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoogleSignup"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Google"
+                android:textSize="14sp"
+                app:strokeColor="@color/white"
+                app:cornerRadius="12dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:drawablePadding="8dp"
+                app:iconTint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFacebookSignup"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Facebook"
+                android:textSize="14sp"
+                app:strokeColor="@color/white"
+                app:cornerRadius="12dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:drawablePadding="8dp"
+                app:iconTint="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
